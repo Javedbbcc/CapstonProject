@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>Elementor</title>
+    <style>
+        section{
+            top: 20px;
+            position: relative;
+        }
+        .elementor{
+            width: 80%;
+            margin: auto;
+        }
+        .elementor-element{
+            width: 66%;
+            font-size: 16px;
+            margin-right: 22px;
+        }
+        .elementor-row{
+            display: flex;
+        }
+        @media all and (max-width: 1200px) {
+            .elementor-row{
+                flex-direction: column;
+            }
+            .elementor-element{
+            width: 100%;
+            }
+            .about-element{
+                width: 100%;
+            }
+            .row{
+                flex-direction: column;
+            }
+            .fadeInUp{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .row-footer{
+                flex-direction: column;
+            }
+            .col-md-3{
+                width: max-content;
+            }
+        }
+        
+        .links:hover{
+            background: none;
+            color: black;
+        }
+        .container2{
+            display: flex;
+            margin: auto;
+            width: 80%;
+            height: fit-content;
+            padding: 10px;
+            background-color: aqua;
+        }
+        .container-element-1{
+            width: 20%;
+            height: 500px;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .container-element-2{
+            width: 60%;
+            height: 500px;
+            background-color: rgb(55, 9, 124);
+            padding: 10px;
+        }
+        .about{
+            display: flex;
+            width: 100%;
+            height: fit-content;
+        }
+        .about-element{
+            width: 25%;
+            height: fit-content;
+        }
+        .welcome-section{
+            width: 80%;
+            margin: auto;
+        }
+        
+        .counter-section i { display:block; margin:0 0 10px}
+.counter-section span.counter { font-size:40px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
+.counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
+.counter-icon {top:25px; position:relative}
+.counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+.counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+.counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+.counter-subheadline span {float: right;}  
+
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
+} 
+
+.container{
+    width: 100%;
+    height: fit-content;
+    padding: 40px;
+    padding-bottom: 100px;
+    justify-content: center;
+}
+.fadeIn{
+    background-image: url("footer.png");
+    background-repeat: no-repeat;
+    
+    background-position: bottom;
+}
+.fadeInUp{
+    margin: 5%;
+}
+.row{
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    background-color: #727272;
+    color: #242c5e;
+}
+.container-footer{
+    
+    padding: 40px;
+}
+.row-footer{
+    display: flex;
+    justify-content: center;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgb(255 255 255);
+}
+.footer .textwidget {
+    margin-top: -5px;
+    color: #e1e1e1;
+    font-size: large;
+}
+
+@media (min-width: 768px){
+.col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 100%;
+}
+}
+    </style>
+  </head>
+  <body>
+    <section class="welcome-section"data-id="5bfc58b" data-element_type="section" data-settings='{"animation":"fadeInDown"}'>
+      <div class="elementor-container">
+        <div class="elementor-row">
+          <div class="elementor-element"  data-id="64ca458" data-element_type="column">
+            <div class="elementor-column-wrap">
+              <div class="elementor-widget-wrap">
+                <div class="elementor-widget-text-editor" data-id="53a1fa9" data-element_type="widget" data-widget_type="text-editor.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-clearfix">
+                      <h1 style="box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif;  font-size: 25px;
+                          font-weight: 290; margin: 0px 0px 10px;
+                          line-height: 1.1; color: black; font-style: normal; font-variant-ligatures: normal;
+                          font-variant-caps: normal; letter-spacing: normal; orphans: 2;
+                          text-indent: 0px; text-transform: none; white-space: normal;
+                          widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                          text-decoration-style: initial; text-decoration-color: initial; background-color: #f6f4f5;padding: 6px; " align="Left">
+                        Welcome to University of Health Sciences Lahore
+                      </h1>
+                      <p style="color: black; margin-right: 12px;" >
+                        University of Health Sciences (UHS) Lahore is a vibrant,
+                        internationally recognized, student-centered, research
+                        university with 128 colleges and institutes affiliated
+                        and around 106916 undergraduate and 9157 postgraduate
+                        students registered with it.
+                      </p>
+                      <p style="color: black">
+                        The University was established in 2002. It was the first
+                        dedicated health sciences university established in the
+                        province with a vision to bring qualitative and
+                        quantitative revolution in medical education and
+                        research through evolution. Almost all the public and
+                        private medical and dental colleges of the Punjab are
+                        affiliated with UHS.
+                      </p>
+                      <p style="color: black">
+                        The University is focused on delivering high-quality
+                        instruction in Basic Medical Sciences, revitalizing the
+                        neglected fields of Nursing and Allied Health Sciences,
+                        pioneering courses in Medical Education, Human Genetics
+                        and Behavioural Sciences, and fostering indigenous
+                        research activities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="elementor-top-column" data-id="679b149"  data-element_type="column">
+            <div class="elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div class="elementor-widget-text-editor" data-id="a4dd1f3" data-element_type="widget" data-widget_type="text-editor.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-clearfix2">
+                      <h2 style=" box-sizing: border-box;
+                          font-family: 'Segoe UI', Arial, sans-serif;  font-size: 20px; font-weight: 290; margin: 0px 0px 10px;
+                          line-height: 1.1; color: white; font-style: normal; font-variant-ligatures: normal;
+                          font-variant-caps: normal; letter-spacing: normal; orphans: 2;  text-indent: 0px; text-transform: none;
+                          white-space: normal; widows: 2;
+                          word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+                          text-decoration-color: initial; background-color: #028482; padding: 8px;" align="center" >
+                        MDCAT 2023-24
+                      </h2>
+
+                      <ul>
+                        <li>
+                          &nbsp;<span style="color: black">
+                            <a href="http://111.68.105.13/mdcat2023" class="links"><b>Download MDCAT-2023 Admittance Card.</b ><img src="new1.gif" />
+                            </a>
+                          </span>
+                        </li>
+                        <br />
+
+                        <li>
+                          &nbsp;<span style="color: black">
+                            <a href="mcat/corrigendum2023.pdf" class="links"><b>CORRIGENDUM Medical &amp; Dental College
+                                Admission Test (MDCAT)-2023.</b><img src="new1.gif" />
+                            </a>
+                          </span>
+                        </li>
+                        <br />
+                        <li>
+                          &nbsp;<span style="color: black">
+                            <a href="mcat/booklet20231.pdf" class="links"><b>MDCAT Information Booklet 2023.</b><img src="new1.gif" /></a>
+                          </span>
+                        </li>
+                        <br />
+                        <li style="list-style-type: none">
+                          <div align="right">
+                            <a style="color: red" href="et2019.php" class="links">Read more.</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="container2">
+            <div class="container-element-1">
+                <div class="head-title"> <h1>Quick Links</h1></div>
+                <div class="animate">
+                    <div class="inner-animate">
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="container-element-2">
+                <div class="head-title"> <h1>Events at UHS</h1></div>
+
+            </div>
+            
+            <div class="container-element-1">
+                <div class="head-title"> <h1>News</h1></div>
+                <div class="animate">
+                    <div class="inner-animate">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="" style="background-image: url('CTA-1.jpg');background-repeat: no-repeat; background-size: cover; width: 100%;height: 600px;padding: 40px;">
+            <h1 style=" color: #fff; text-align: center;  font-family: 'Montserrat', Sans-serif;font-size: 48px;font-weight: bold;
+             line-height: 65px;  padding-top: 15%;  width: 80%; margin: auto;">
+                The University of Health Sciences (UHS) has been
+                    ranked
+                in top 700 medical universities of the world.
+            </h1>
+        </div>
+    </section>
+    <section class="about-uhs-section" style="margin-top: 150px;">
+        <div class="about-uhs" style="text-align: center;color: #242c5e;padding: 0; margin: 0; line-height: 1; top: 10px;" >
+            <h2>About UHS</h2>
+        </div>
+    </section>
+    
+    <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+        <div class="container">
+            <div class="row">
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                    <i class="fa fa-flag medium-icon"></i>
+                    <span id="anim-number-pizza" class="counter-number"></span>
+                    <span class="timer counter alt-font appear" data-to="980" data-speed="7000">106916</span>
+                    <p class="counter-title">Undergraduate</p>
+                </div>
+                <!-- end counter -->
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                    <i class="fa fa-heart medium-icon"></i>
+                     <span class="timer counter alt-font appear" data-to="980" data-speed="7000">9157</span>
+                    <span class="counter-title">Postgraduate</span>
+                </div>
+                <!-- end counter -->
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                    <i class="fa fa-building medium-icon"></i>
+                     <span class="timer counter alt-font appear" data-to="810" data-speed="7000">128</span>
+                    <span class="counter-title">Colleges</span>
+                </div>
+                <!-- end counter -->
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
+                    <i class="fa fa-user medium-icon"></i>
+                     <span class="timer counter alt-font appear" data-to="18" data-speed="7000">20</span>
+                    <span class="counter-title">Departments</span>
+                </div>
+                <!-- end counter -->
+            </div>
+        </div>
+    </section>
+    <section id="footer" class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-sidebar-1" style="width: 25%;">
+                    <div class="col-md-3 col-sm-6" style="
+                    width: min-content;">
+                        <div id="text-8" class="widget widget_text">			
+                            <div class="textwidget"><strong class="tg-logo"><a href="index.php"><img src="logo2.png" alt="image description"></a></strong>
+                            <hr>
+                            University of Health Sciences, Khayaban-e-Jamia Punjab, Lahore-54600.
+                            <!--	<li>042-99231304-09</li>-->
+                                <li>Helpline (24/7) # 111-33-33-66</li>
+                                <!--<li>Fax: 042-99230870</li>-->
+                                <li>info@uhs.edu.pk</li>
+                                <!--<li>help@uhs.edu.pk</li>
+                                <li>webdeveloper@uhs.edu.pk</li>--></div>
+                                    </div>                    
+                                </div><!--col-md -->                
+                            </div> <!--end of footer-sidebar-1-->
+
+                <!--start footer-sidebar-2 widget-->
+                <div class="footer-sidebar-2">
+                    <div class="col-md-3 col-sm-6">
+                        <div id="text-12" class="widget widget_text">			
+                            <div class="textwidget"><h3>Site Links</h3>
+                        <hr>
+                            <li><a href="index.php" style="color:white">Home</a></li>
+                            <li><a href="about-us.php" style="color:white">About us</a></li>
+                            <li><a href="Admissions.php" style="color:white">Admission News</a></li>
+                            <li> <a href="intlink.php" style="color:white">International Collaboration</a></li>
+                            <!--<li>News Letters</li>-->
+                            <li><a href="http:\\webmail.uhs.edu.pk" style="color:white">Web Mail</a></li>
+                            <li><a href="jobs.php" style="color:white">Careers</a></li>
+                        </div>
+                    </div>
+                </div><!--col-md -->
+            </div> <!--end of footer-sidebar-2-->
+
+                <!-- Start footer-sidebar-3 Widget-->
+                <div class="footer-sidebar-3">
+                    <div class="col-md-3 col-sm-6">
+                      <div id="text-13" class="widget widget_text">			
+                        <div class="textwidget"><h3>Examinations</h3><hr>
+                            <!--<li><a href="admissions.php" style="color:white">Admissions</a></li>-->	
+                            <li><a href="fee-struct.php" style="color:white">Fee Structure</a></li>
+                            <li><a href="convocation.php" style="color:white">Convocation</a></li>	
+                            <li><a href="DS-MBBS.php" style="color:white">Date sheets</a></li>
+                            <li><a href="http:\\results.uhs.edu.pk" style="color:white">Results</a></li>
+                            <li><a href="http:\\exams.uhs.edu.pk" style="color:white">Online Examination Form</a></li>	
+                            <li><a href="https://lms.uhs.edu.pk/" style="color:white">E Learning Portal</a></li>	
+                        </div>
+                    </div>
+                </div>
+            </div> <!--end of footer-sidebar-3-->
+
+                <!-- Start footer-sidebar-4 Widget-->
+                <div class="footer-sidebar-4">
+                    <div class="col-md-3 col-sm-6">
+                      <div id="text-15" class="widget widget_text">			<div class="textwidget"><h3>Important Links</h3>
+                            <hr>
+                            <li><a href="tenders2023.php" style="color:white">Tenders</a></li>
+                            <li><a href="affiliation-process.php" style="color:white">Affiliation</a></li>
+                            <li><a href="http://biomedicapk.com" style="color:white">Biomedica</a></li>
+                            <li><a href="downloads/newsletter2021.pdf" style="color:white">News Letter</a></li>
+                            <li><a href="library.php" style="color:white">Library</a></li>
+                            <!--<li>Site Map</li>-->
+                            <li><a href="qec/index.html" style="color:white">QEC</a></li>
+                            </div>
+		</div>                    </div><!--col-md -->
+                </div> <!--end of footer-sidebar-4-->
+                
+            </div>   <!--end of row-->
+        </div>  <!--end of container-->
+    </section>
+    <script>
+    $(document).ready(function() {
+
+        $('.counter').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+}); 
+ 
+});  
+</script>
+  </body>
+</html>

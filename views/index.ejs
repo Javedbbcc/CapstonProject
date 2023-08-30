@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link href="/styles/main.css" rel="stylesheet" type="text/css" /> -->
+    <title>Name Letters</title>
+  </head>
+
+  <body>
+    <div class="full-body">
+      <%- include ("header.ejs") %>
+      <!-- <%- include("header2.ejs") %> -->
+      <%- include("slider.ejs") %>
+      <%- include("elementor.ejs") %>
+      <%- include ("footer.ejs") %>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#List").on("click", function () {
+          $("#taskbutton").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
